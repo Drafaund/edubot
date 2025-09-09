@@ -1,0 +1,46 @@
+{
+  "name": "edubot-whatsapp-chatbot",
+  "version": "1.0.0",
+  "description": "Educational consultation chatbot with WhatsApp integration using regex-based rules and pronoun reflection",
+  "main": "chatbot.js",
+  "scripts": {
+    "start": "node whatsapp-bot.js",
+    "cli": "node cli.js",
+    "safe": "node safe-whatsapp-bot.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "dev": "nodemon whatsapp-bot.js"
+  },
+  "bin": {
+    "edubot-cli": "./cli.js"
+  },
+  "keywords": [
+    "chatbot",
+    "whatsapp",
+    "education",
+    "consultation",
+    "regex",
+    "nlp"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "whatsapp-web.js": "^1.23.0",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drafaund/konsultasi-kuliah.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Drafaund/konsultasi-kuliah/issues"
+  },
+  "homepage": "https://github.com/Drafaund/konsultasi-kuliah#readme"
+}
