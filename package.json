@@ -37,10 +37,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Drafaund/konsultasi-kuliah.git"
+    "url": "git+https://github.com/Drafaund/edubot.git"
   },
   "bugs": {
-    "url": "https://github.com/Drafaund/konsultasi-kuliah/issues"
+    "url": "https://github.com/Drafaund/edubot/issues"
   },
-  "homepage": "https://github.com/Drafaund/konsultasi-kuliah#readme"
+  "homepage": "https://github.com/Drafaund/edubot#readme"
 }
