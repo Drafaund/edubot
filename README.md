@@ -193,9 +193,9 @@ DEBUG=* npm start
 <img width="1442" height="917" alt="ss-qr-terminal" src="https://github.com/user-attachments/assets/ce82ac10-7ee6-45d4-b76d-ba66a02eb2ea" />
 
 ### Conversation Examples
-![Chat Demo](demo/conversation-demo.png)
+https://github.com/user-attachments/assets/c41f81a1-b0f7-4d85-9bc2-bf7e2af46519
 
-*Note: Replace dengan screenshot/GIF aktual setelah testing*
+https://github.com/user-attachments/assets/caf13fc3-7943-4b39-af08-834f01fb3ac4
 
 ## 🧪 Rules Complexity
 
