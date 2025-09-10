@@ -21,7 +21,6 @@ Banyak siswa SMA mengalami kebingungan dalam memilih jurusan dan mempersiapkan d
 - **Regex-based Rules**: Pattern matching untuk berbagai jenis pertanyaan
 - **Pronoun Reflection**: Otomatis mengubah kata ganti (saya→Anda, kamu→saya)
 - **WhatsApp Integration**: Terintegrasi langsung dengan WhatsApp Web
-- **Logging System**: Pencatatan semua interaksi untuk analisis
 
 ## 🚀 Quick Start
 
