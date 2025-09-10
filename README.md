@@ -32,8 +32,8 @@ Banyak siswa SMA mengalami kebingungan dalam memilih jurusan dan mempersiapkan d
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/edubot-whatsapp-chatbot.git
-cd edubot-whatsapp-chatbot
+git clone https://github.com/Drafaund/edubot.git
+cd edubot
 
 # Install dependencies
 npm install
