@@ -196,8 +196,6 @@ class EducationChatbot {
             if (this.prospekJurusan[jurusan]) {
               return `🚀 **Prospek Karir untuk ${jurusan.replace(/\b\w/g, c => c.toUpperCase())}:**\n\n${this.prospekJurusan[jurusan]}`;
             }
-
-            return "Maaf, saya belum punya data prospek untuk jurusan tersebut.";
           },
         },
         {
@@ -208,7 +206,19 @@ class EducationChatbot {
             if (jurusan && this.jurusanDescriptions[jurusan]) {
               return `📚 **Informasi Program Studi:**\n\n**${jurusan.replace(/\b\w/g, c => c.toUpperCase())}:**\n${this.jurusanDescriptions[jurusan]}`;
             }
-
+          },
+        },
+        {
+          // Pattern fallback: jika user nanya prospek kerja tapi jurusan lain
+          pattern: /(prospek|peluang|karir).*(kerja|masa depan).*(?:jurusan\s+)?([a-zA-Z\s]+)/i,
+          responses: (match) => {
+            return "Maaf, saya belum punya data prospek untuk jurusan itu 😢";
+          },
+        },
+        {
+          // jurusan tidak dikenali
+          pattern: /^(?:jurusan\s+)?([a-zA-Z\s]+)$/i,
+          responses: (match) => {
             return "Maaf, saya belum punya informasi untuk jurusan itu 😢";
           },
         },
