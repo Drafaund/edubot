@@ -175,35 +175,7 @@ class SafeWhatsAppBot {
       }
     }
 
-    // Check 9: Command validation - only respond to reasonable requests
-    const lowerText = text.toLowerCase();
-    const validPrefixes = [
-      "hai",
-      "halo",
-      "hi",
-      "hello",
-      "ujian",
-      "kuliah",
-      "beasiswa",
-      "jurusan",
-      "prodi",
-      "teknik",
-      "biaya",
-      "perbedaan",
-      "help",
-      "bantuan",
-    ];
-
-    const hasValidPrefix = validPrefixes.some((prefix) =>
-      lowerText.includes(prefix)
-    );
-
-    if (!hasValidPrefix) {
-      this.log("DEBUG", "Message ignored - no valid prefix");
-      return;
-    }
-
-    // ONLY NOW process the message
+    // PROCESS the message - let chatbot decide how to respond
     await this.processAndRespond(message, text, contact, chat);
   }
 
@@ -212,7 +184,7 @@ class SafeWhatsAppBot {
       // Show typing indicator
       await chat.sendStateTyping();
 
-      // Process with chatbot
+      // Process with chatbot - let it handle everything including fallback
       const result = this.chatbot.processMessage(text);
 
       // Add natural delay

@@ -3,18 +3,30 @@ class EducationChatbot {
     this.rules = this.initializeRules();
     this.context = {};
     this.jurusanDescriptions = {
-      "teknik informatika": "• Fokus: Programming, algoritma, software engineering\n• Matematis dan teknis\n• Prospek: Software Developer, System Analyst",
-      "ilmu komputer": "• Fokus: Teori komputasi, AI, data science\n• Lebih teoritis dan riset\n• Prospek: Data Scientist, Researcher, AI Engineer",
-      "sistem informasi": "• Fokus: Manajemen IT, business process\n• Gabungan IT dan bisnis\n• Prospek: IT Consultant, Business Analyst",
-      "teknik elektro": "• Fokus: Kelistrikan, elektronika, telekomunikasi\n• Prospek: Electrical Engineer, Automation Engineer, Power Plant Engineer",
-      "teknik sipil": "• Fokus: Infrastruktur, konstruksi, manajemen proyek\n• Prospek: Civil Engineer, Project Manager, Konsultan Infrastruktur",
-      "kedokteran": "• Fokus: Ilmu medis, diagnosis, pengobatan penyakit\n• Prospek: Dokter Umum, Spesialis, Peneliti Medis",
-      "farmasi": "• Fokus: Obat, kimia medisinal, farmakologi\n• Prospek: Apoteker, Quality Control, Research Scientist",
-      "manajemen": "• Fokus: Manajemen organisasi, SDM, keuangan\n• Prospek: Manager, Business Analyst, Marketing Specialist",
-      "akuntansi": "• Fokus: Laporan keuangan, audit, perpajakan\n• Prospek: Akuntan Publik, Auditor, Tax Consultant",
-      "ilmu hukum": "• Fokus: Hukum perdata, pidana, bisnis, tata negara\n• Prospek: Pengacara, Hakim, Notaris, Corporate Legal",
-      "hubungan internasional": "• Fokus: Diplomasi, politik global, organisasi internasional\n• Prospek: Diplomat, International Analyst, NGO Specialist",
-      "ilmu komunikasi": "• Fokus: Media, PR, jurnalistik, digital communication\n• Prospek: Public Relations, Content Creator, Jurnalis",
+      "teknik informatika":
+        "• Fokus: Programming, algoritma, software engineering\n• Matematis dan teknis\n• Prospek: Software Developer, System Analyst",
+      "ilmu komputer":
+        "• Fokus: Teori komputasi, AI, data science\n• Lebih teoritis dan riset\n• Prospek: Data Scientist, Researcher, AI Engineer",
+      "sistem informasi":
+        "• Fokus: Manajemen IT, business process\n• Gabungan IT dan bisnis\n• Prospek: IT Consultant, Business Analyst",
+      "teknik elektro":
+        "• Fokus: Kelistrikan, elektronika, telekomunikasi\n• Prospek: Electrical Engineer, Automation Engineer, Power Plant Engineer",
+      "teknik sipil":
+        "• Fokus: Infrastruktur, konstruksi, manajemen proyek\n• Prospek: Civil Engineer, Project Manager, Konsultan Infrastruktur",
+      kedokteran:
+        "• Fokus: Ilmu medis, diagnosis, pengobatan penyakit\n• Prospek: Dokter Umum, Spesialis, Peneliti Medis",
+      farmasi:
+        "• Fokus: Obat, kimia medisinal, farmakologi\n• Prospek: Apoteker, Quality Control, Research Scientist",
+      manajemen:
+        "• Fokus: Manajemen organisasi, SDM, keuangan\n• Prospek: Manager, Business Analyst, Marketing Specialist",
+      akuntansi:
+        "• Fokus: Laporan keuangan, audit, perpajakan\n• Prospek: Akuntan Publik, Auditor, Tax Consultant",
+      "ilmu hukum":
+        "• Fokus: Hukum perdata, pidana, bisnis, tata negara\n• Prospek: Pengacara, Hakim, Notaris, Corporate Legal",
+      "hubungan internasional":
+        "• Fokus: Diplomasi, politik global, organisasi internasional\n• Prospek: Diplomat, International Analyst, NGO Specialist",
+      "ilmu komunikasi":
+        "• Fokus: Media, PR, jurnalistik, digital communication\n• Prospek: Public Relations, Content Creator, Jurnalis",
     };
 
     this.prospekJurusan = {
@@ -23,7 +35,8 @@ class EducationChatbot {
       ekonomi: "💼 **Ekonomi:** Akuntan, Financial Analyst, Banker",
       hukum: "⚖️ **Hukum:** Lawyer, Notaris, Hakim, Corporate Legal",
       komunikasi: "📡 **Ilmu Komunikasi:** PR, Jurnalis, Content Creator",
-      internasional: "🌍 **Hubungan Internasional:** Diplomat, Konsultan NGO, Analis Global",
+      internasional:
+        "🌍 **Hubungan Internasional:** Diplomat, Konsultan NGO, Analis Global",
     };
 
     this.reflections = {
@@ -168,7 +181,8 @@ class EducationChatbot {
       // Specific program studies
       program_study: [
         {
-          pattern: /(perbedaan|beda).*?(teknik informatika|ilmu komputer|sistem informasi|teknik elektro|teknik sipil|kedokteran|farmasi|manajemen|akuntansi|ilmu hukum|hubungan internasional|ilmu komunikasi).*?dan.*?(teknik informatika|ilmu komputer|sistem informasi|teknik elektro|teknik sipil|kedokteran|farmasi|manajemen|akuntansi|ilmu hukum|hubungan internasional|ilmu komunikasi)/i,
+          pattern:
+            /(perbedaan|beda).*?(teknik informatika|ilmu komputer|sistem informasi|teknik elektro|teknik sipil|kedokteran|farmasi|manajemen|akuntansi|ilmu hukum|hubungan internasional|ilmu komunikasi).*?dan.*?(teknik informatika|ilmu komputer|sistem informasi|teknik elektro|teknik sipil|kedokteran|farmasi|manajemen|akuntansi|ilmu hukum|hubungan internasional|ilmu komunikasi)/i,
           responses: (match) => {
             // match[2] = jurusan pertama
             // match[3] = jurusan kedua (opsional)
@@ -178,10 +192,14 @@ class EducationChatbot {
             let response = "💻 **Perbedaan Program Studi:**\n\n";
 
             if (jurusan1 && this.jurusanDescriptions[jurusan1]) {
-              response += `**${jurusan1.replace(/\b\w/g, c => c.toUpperCase())}:**\n${this.jurusanDescriptions[jurusan1]}\n\n`;
+              response += `**${jurusan1.replace(/\b\w/g, (c) =>
+                c.toUpperCase()
+              )}:**\n${this.jurusanDescriptions[jurusan1]}\n\n`;
             }
             if (jurusan2 && this.jurusanDescriptions[jurusan2]) {
-              response += `**${jurusan2.replace(/\b\w/g, c => c.toUpperCase())}:**\n${this.jurusanDescriptions[jurusan2]}\n\n`;
+              response += `**${jurusan2.replace(/\b\w/g, (c) =>
+                c.toUpperCase()
+              )}:**\n${this.jurusanDescriptions[jurusan2]}\n\n`;
             }
 
             return response.trim();
@@ -194,23 +212,30 @@ class EducationChatbot {
             const jurusan = match[3].toLowerCase();
 
             if (this.prospekJurusan[jurusan]) {
-              return `🚀 **Prospek Karir untuk ${jurusan.replace(/\b\w/g, c => c.toUpperCase())}:**\n\n${this.prospekJurusan[jurusan]}`;
+              return `🚀 **Prospek Karir untuk ${jurusan.replace(/\b\w/g, (c) =>
+                c.toUpperCase()
+              )}:**\n\n${this.prospekJurusan[jurusan]}`;
             }
           },
         },
         {
-          pattern: /(?:jurusan\s+)?(teknik informatika|ilmu komputer|sistem informasi|teknik elektro|teknik sipil|kedokteran|farmasi|manajemen|akuntansi|ilmu hukum|hubungan internasional|ilmu komunikasi)/i,
+          pattern:
+            /(?:jurusan\s+)?(teknik informatika|ilmu komputer|sistem informasi|teknik elektro|teknik sipil|kedokteran|farmasi|manajemen|akuntansi|ilmu hukum|hubungan internasional|ilmu komunikasi)/i,
           responses: (match) => {
             const jurusan = match[1].toLowerCase();
 
             if (jurusan && this.jurusanDescriptions[jurusan]) {
-              return `📚 **Informasi Program Studi:**\n\n**${jurusan.replace(/\b\w/g, c => c.toUpperCase())}:**\n${this.jurusanDescriptions[jurusan]}`;
+              return `📚 **Informasi Program Studi:**\n\n**${jurusan.replace(
+                /\b\w/g,
+                (c) => c.toUpperCase()
+              )}:**\n${this.jurusanDescriptions[jurusan]}`;
             }
           },
         },
         {
           // Pattern fallback: jika user nanya prospek kerja tapi jurusan lain
-          pattern: /(prospek|peluang|karir).*(kerja|masa depan).*(?:jurusan\s+)?([a-zA-Z\s]+)/i,
+          pattern:
+            /(prospek|peluang|karir).*(kerja|masa depan).*(?:jurusan\s+)?([a-zA-Z\s]+)/i,
           responses: (match) => {
             return "Maaf, saya belum punya data prospek untuk jurusan itu 😢";
           },
@@ -229,7 +254,6 @@ class EducationChatbot {
             "💰 **Estimasi Biaya Kuliah per Tahun:**\n\n🏛️ **PTN (Perguruan Tinggi Negeri):**\n• UKT: Rp 0 - 12 juta/tahun\n• Biaya hidup: Rp 15-30 juta/tahun\n\n🏢 **PTS (Perguruan Tinggi Swasta):**\n• SPP: Rp 8 - 50 juta/tahun\n• Uang pangkal: Rp 10 - 100 juta\n• Biaya hidup: Rp 15-30 juta/tahun\n\n*Biaya bervariasi tergantung kota dan program studi*\n\nIngin tahu biaya spesifik prodi tertentu?",
           ],
         },
-        
       ],
 
       // Help and fallback
@@ -247,9 +271,7 @@ class EducationChatbot {
         {
           pattern: /.*/,
           responses: [
-            "Maaf, saya belum memahami pertanyaan {reflect}. Bisa dijelaskan lebih spesifik?",
-            "Hmm, saya kurang paham. Coba tanyakan tentang ujian masuk, beasiswa, atau program studi tertentu.",
-            'Saya fokus pada konsultasi pendidikan. Bisa tanya tentang kuliah, jurusan, atau karir? Ketik "help" untuk menu.',
+            'Maaf, saya belum memahami pertanyaan {reflect}. Bisa dijelaskan lebih spesifik? Atau Ketik "help" untuk menu.',
           ],
         },
       ],
@@ -307,7 +329,9 @@ class EducationChatbot {
       }
     }
 
-    const fallbackResponse = this.getRandomResponse(this.rules.fallback[0].responses);
+    const fallbackResponse = this.getRandomResponse(
+      this.rules.fallback[0].responses
+    );
     return {
       response: fallbackResponse.replace("{reflect}", "Anda"),
       category: "fallback",
