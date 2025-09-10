@@ -188,7 +188,9 @@ DEBUG=* npm start
 ## 📱 Demo
 
 ### WhatsApp QR Code Process
+
 ![QR Code Setup](demo/qr-setup.gif)
+<img width="1442" height="917" alt="ss-qr-terminal" src="https://github.com/user-attachments/assets/ce82ac10-7ee6-45d4-b76d-ba66a02eb2ea" />
 
 ### Conversation Examples
 ![Chat Demo](demo/conversation-demo.png)
