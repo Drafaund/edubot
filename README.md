@@ -193,9 +193,9 @@ DEBUG=* npm start
 <img width="1442" height="917" alt="ss-qr-terminal" src="https://github.com/user-attachments/assets/ce82ac10-7ee6-45d4-b76d-ba66a02eb2ea" />
 
 ### Conversation Examples
-https://github.com/user-attachments/assets/c41f81a1-b0f7-4d85-9bc2-bf7e2af46519
+https://github.com/user-attachments/assets/d6f82f4f-7cdd-4900-8f6d-cc0761f93493
 
-https://github.com/user-attachments/assets/caf13fc3-7943-4b39-af08-834f01fb3ac4
+https://github.com/user-attachments/assets/4ff54c9d-af46-4554-a7ce-5a56a8a409d8
 
 ## 🧪 Rules Complexity
 
