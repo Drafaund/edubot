@@ -37,6 +37,7 @@ cd edubot-whatsapp-chatbot
 
 # Install dependencies
 npm install
+```
 
 ### Running CLI Mode
 ```bash
