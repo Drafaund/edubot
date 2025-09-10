@@ -15,7 +15,6 @@ Banyak siswa SMA mengalami kebingungan dalam memilih jurusan dan mempersiapkan d
 ### 📋 Kategori Konsultasi
 - **Kuliah Umum**: Informasi ujian masuk (SNBP, SNBT), kuliah dalam/luar negeri, beasiswa
 - **Program Studi**: Perbandingan jurusan, estimasi biaya, prospek karir
-- **Reflection System**: Menggunakan kata ganti yang sesuai dalam percakapan
 
 ### 🤖 Teknologi
 - **Regex-based Rules**: Pattern matching untuk berbagai jenis pertanyaan
@@ -52,9 +51,6 @@ node cli.js
 ```bash
 # Start WhatsApp bot
 npm start
-
-# Or with development mode (auto-restart)
-npm run dev
 ```
 
 **Proses Setup WhatsApp:**
@@ -148,29 +144,6 @@ new_category: [
         ]
     }
 ]
-```
-
-## 📊 Logging & Monitoring
-
-Bot secara otomatis mencatat:
-- ✅ Semua pesan masuk dan keluar
-- ✅ Tingkat confidence setiap response
-- ✅ Error dan debugging info
-- ✅ Statistik penggunaan
-
-Log disimpan di: `logs/whatsapp-bot.log`
-
-## 🛠️ Development
-
-```bash
-# Install development dependencies
-npm install --dev
-
-# Run with nodemon (auto-restart)
-npm run dev
-
-# Debug mode
-DEBUG=* npm start
 ```
 
 ## 📱 Demo
