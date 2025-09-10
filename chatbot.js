@@ -102,6 +102,13 @@ class EducationChatbot {
           ],
         },
         {
+          pattern:
+            /(persiapan|belajar|dipersiapkan).*(snbt|ujian|sbmptn|utbk)/i,
+          responses: [
+            "📚 **Persiapan SNBT/UTBK:**\n\n📖 **Materi yang Diujikan:**\n• TPS (Tes Potensi Skolastik): Logika, bahasa\n• TKA Saintek: Mat, Fis, Kim, Bio\n• TKA Soshum: Sej, Geo, Eko, Sose\n• Bahasa Inggris & Indonesia\n\n⏰ **Timeline Persiapan:**\n• H-12 bulan: Mulai belajar konsep dasar\n• H-6 bulan: Intensif latihan soal\n• H-3 bulan: Tryout rutin + evaluasi\n• H-1 bulan: Review & mental preparation\n\n💪 **Tips Jitu:**\n• Latih soal HOTS (Higher Order Thinking)\n• Manage waktu pengerjaan\n• Fokus pada materi yang sering keluar\n• Jaga kesehatan fisik & mental\n\nButuh strategi belajar detail?",
+          ],
+        },
+        {
           pattern: /(ptn|perguruan tinggi negeri|universitas negeri)/i,
           responses: [
             "🏛️ **Perguruan Tinggi Negeri (PTN) Populer:**\n\n🥇 **Top PTN Indonesia:**\n• UI (Universitas Indonesia)\n• ITB (Institut Teknologi Bandung)\n• UGM (Universitas Gadjah Mada)\n• ITS (Institut Teknologi Sepuluh Nopember)\n• IPB (Institut Pertanian Bogor)\n• UNPAD (Universitas Padjadjaran)\n• UNDIP (Universitas Diponegoro)\n\n✅ **Keunggulan PTN:**\n• Biaya kuliah terjangkau\n• Reputasi dan akreditasi baik\n• Fasilitas lengkap\n• Alumni network kuat\n\nIngin info PTN tertentu?",
@@ -127,13 +134,7 @@ class EducationChatbot {
             "🚪 **Jalur Masuk Perguruan Tinggi:**\n\n📚 **PTN (Perguruan Tinggi Negeri):**\n• SNBP (dulu SNMPTN) - 20% kuota, tanpa tes\n• SNBT (dulu SBMPTN) - 40% kuota, tes tulis\n• Mandiri PTN - 40% kuota, tes kampus\n\n🏢 **PTS (Perguruan Tinggi Swasta):**\n• Tes Mandiri\n• Jalur Prestasi\n• Jalur Beasiswa\n• Transfer/Pindahan\n\n💡 **Tips Sukses:**\n• Persiapkan dari kelas 10-11\n• Jaga nilai rapor konsisten\n• Ikuti tryout rutin\n• Pilih prodi sesuai minat\n\nMau strategi khusus jalur tertentu?",
           ],
         },
-        {
-          pattern:
-            /(persiapan|belajar|dipersiapkan).*(snbt |ujian|sbmptn|utbk)/i,
-          responses: [
-            "📚 **Persiapan SNBT/UTBK:**\n\n📖 **Materi yang Diujikan:**\n• TPS (Tes Potensi Skolastik): Logika, bahasa\n• TKA Saintek: Mat, Fis, Kim, Bio\n• TKA Soshum: Sej, Geo, Eko, Sose\n• Bahasa Inggris & Indonesia\n\n⏰ **Timeline Persiapan:**\n• H-12 bulan: Mulai belajar konsep dasar\n• H-6 bulan: Intensif latihan soal\n• H-3 bulan: Tryout rutin + evaluasi\n• H-1 bulan: Review & mental preparation\n\n💪 **Tips Jitu:**\n• Latih soal HOTS (Higher Order Thinking)\n• Manage waktu pengerjaan\n• Fokus pada materi yang sering keluar\n• Jaga kesehatan fisik & mental\n\nButuh strategi belajar detail?",
-          ],
-        },
+
         {
           pattern: /(kos|asrama|tempat tinggal).*(kuliah|mahasiswa)/i,
           responses: [
