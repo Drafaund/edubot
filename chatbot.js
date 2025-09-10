@@ -217,7 +217,7 @@ class EducationChatbot {
         },
         {
           // jurusan tidak dikenali
-          pattern: /^(?:jurusan\s+)?([a-zA-Z\s]+)$/i,
+          pattern: /(jurusan).*([a-zA-Z\s]+)$/i,
           responses: (match) => {
             return "Maaf, saya belum punya informasi untuk jurusan itu 😢";
           },
