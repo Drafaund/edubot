@@ -71,8 +71,7 @@ class EducationChatbot {
           ],
         },
       ],
-
-      // General college questions - EXPANDED
+      // Pertanyaan umum tentang kuliah
       college_general: [
         {
           pattern:
@@ -96,9 +95,9 @@ class EducationChatbot {
         },
         {
           pattern:
-            /(tips|cara|bagaimana).*(memilih|pilih).*(jurusan|prodi|program studi)/i,
+            /(tips|cara|bagaimana).*(memilih|pilih|milih).*(jurusan|prodi|program studi)/i,
           responses: [
-            "🎯 **Tips Memilih Program Studi:**\n\n1. **Kenali Minat & Bakat** - Apa yang {reflect} sukai?\n2. **Riset Prospek Karir** - Peluang kerja masa depan\n3. **Pertimbangkan Kemampuan** - Sesuai dengan skill\n4. **Lihat Akreditasi** - Kualitas program studi\n5. **Survey Kampus** - Fasilitas dan lingkungan\n\nAda prodi spesifik yang ingin {reflect} tanyakan?",
+            "🎯 **Tips Memilih Program Studi:**\n\n1. **Kenali Minat & Bakat** - Apa yang {reflect} sukai?\n2. **Riset Prospek Karir** - Peluang kerja masa depan\n3. **Pertimbangkan Kemampuan** - Sesuai dengan skill\n4. **Lihat Akreditasi** - Kualitas program studi\n5. **Survey Kampus** - Fasilitas dan lingkungan\n\nAda prodi spesifik yang ingin Anda tanyakan?",
           ],
         },
         {
@@ -257,7 +256,7 @@ class EducationChatbot {
         },
       ],
 
-      // Help and fallback
+      // Help
       help: [
         {
           pattern: /(help|bantuan|menu|fitur|bisa apa)/i,
@@ -272,7 +271,7 @@ class EducationChatbot {
         {
           pattern: /.*/,
           responses: [
-            'Maaf, saya belum memahami pertanyaan {reflect}. Bisa dijelaskan lebih spesifik? Atau Ketik "help" untuk menu.',
+            'Maaf, saya belum memahami pertanyaan Anda. Bisa dijelaskan lebih spesifik? Atau Ketik "help" untuk menu.',
           ],
         },
       ],
@@ -317,8 +316,12 @@ class EducationChatbot {
           }
 
           if (typeof response === "string" && response.includes("{reflect}")) {
-            const reflected = this.reflectPronouns(userMessage);
-            response = response.replace(/{reflect}/g, "Anda");
+            // Cari pronoun utama di pesan user
+            let pronoun = Object.keys(this.reflections).find((p) =>
+              userMessage.includes(p)
+            );
+            let reflected = pronoun ? this.reflections[pronoun] : "Anda";
+            response = response.replace(/{reflect}/g, reflected);
           }
 
           return {
@@ -329,15 +332,6 @@ class EducationChatbot {
         }
       }
     }
-
-    const fallbackResponse = this.getRandomResponse(
-      this.rules.fallback[0].responses
-    );
-    return {
-      response: fallbackResponse.replace("{reflect}", "Anda"),
-      category: "fallback",
-      confidence: 0.1,
-    };
   }
 
   calculateConfidence(message, pattern) {
