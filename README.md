@@ -40,10 +40,6 @@ cd edubot-whatsapp-chatbot
 # Install dependencies
 npm install
 
-# Setup environment (optional)
-cp .env.example .env
-```
-
 ### Running CLI Mode
 ```bash
 # Test bot in CLI mode
@@ -101,9 +97,8 @@ edubot-whatsapp-chatbot/
 ├── .env.example            # Environment template
 ├── README.md               # Documentation
 ├── tests/
-│   └── chatbot.test.js     # Unit tests (12+ test cases)
-└── logs/                   # Bot logs (auto-created)
-    └── whatsapp-bot.log    # WhatsApp interaction logs
+    └── chatbot.test.js     # Unit tests (12+ test cases)
+
 ```
 
 ## 💬 Contoh Percakapan
@@ -139,12 +134,6 @@ Mana yang sesuai minat Anda?"
 ```
 
 ## 🔧 Konfigurasi
-
-### Environment Variables (.env)
-```bash
-BOT_NAME=EduBot
-BOT_VERSION=1.0
-```
 
 ### Custom Rules
 Edit `chatbot.js` untuk menambah/mengubah rules:
@@ -202,12 +191,10 @@ https://github.com/user-attachments/assets/4ff54c9d-af46-4554-a7ce-5a56a8a409d8
 ### Pattern Matching Examples
 - **Simple patterns**: `/^(hai|halo|hi)$/i` - Exact greeting match
 - **Complex patterns**: `/(ujian|tes|seleksi).*(masuk|kuliah|universitas)/i` - Multiple keyword combinations
-- **Context-aware**: Patterns yang mempertimbangkan kombinasi kata untuk akurasi tinggi
 
 ### Pronoun Reflection System
 - **Input**: "saya ingin kuliah teknik informatika"  
 - **Processed**: "Anda ingin kuliah teknik informatika"
-- **Advanced**: Handles multiple pronouns dan context preservation
 
 ## 🤝 Contributing
 
